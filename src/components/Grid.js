@@ -5,7 +5,7 @@ import background from '../assets/grid.png'
 const style = {
     width: '50vh',
     height: '50vh',
-    margin: '0 auto',
+    marginTop: '8vh',
     position: 'absolute',
     display: 'grid',
     gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)',

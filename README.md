@@ -1,2 +1,2 @@
 # grid9
-The nine grid battlefield
+The grid is your battlefield

@@ -13,6 +13,7 @@ const buttonStyle = {
   textTransform: 'uppercase',
   fontFamily: 'Lexend Giga, sans-serif',
   fontSize: '2vh',
+  margin: '3vh',
 }
 
 const Game = () => {

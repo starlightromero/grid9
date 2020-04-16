@@ -11,6 +11,7 @@ const style = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  overflow: 'hidden',
 }
 
 const App = () => {
