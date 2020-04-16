@@ -6,8 +6,11 @@ const style = {
   textAlign: 'center',
   textTransform: 'uppercase',
   fontSize: '5vh',
-  background: 'none',
-  border: 'none'
+  border: 'none',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 const App = () => {

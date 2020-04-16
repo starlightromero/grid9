@@ -39,10 +39,10 @@ const Game = () => {
   return (
     <>
       <Header />
+      {newGame()}
       <Grid signs={grid} onClick={handleClick} />
       <div>
         <p>{winner ? 'Winner: ' + (winner === x ? 'x' : 'o') : 'Next Player: ' + (isXTurn ? 'x' : 'o')}</p>
-        {newGame()}
       </div>
     </>
   )

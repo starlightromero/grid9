@@ -1,13 +1,17 @@
 import React from 'react'
 
 const style = {
-  fontFamily: 'Lexend Giga, sans-serif',
-  fontSize: '5vh',
+  border: 'none',
+  background: 'transparent',
+}
+
+const imgStyle = {
+  height: '10vh',
 }
 
 const GridItem = ({ sign, onClick }) => (
   <button style={style} onClick={onClick}>
-    <img src={sign} />
+    <img style={imgStyle} src={sign} />
   </button>
 )
 
