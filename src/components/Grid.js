@@ -20,7 +20,7 @@ const backgroundStyle = {
 
 const Grid = ({ signs, onClick }) => (
   <>
-    <img style={backgroundStyle} src={background} />
+    <img style={backgroundStyle} src={background} alt="grid" />
     <div style={style}>
       {signs.map((sign, i) => (
         <GridItem key={i} sign={sign} onClick={() => onClick(i)} />

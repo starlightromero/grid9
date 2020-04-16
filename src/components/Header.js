@@ -9,7 +9,7 @@ const headerStyle = {
 
 const h1Style = {
   backgroundImage: 'linear-gradient(to right, #00ffff, #8a2be2, #00ffff)',
-  webkitBackgroundClip: 'text',
+  WebkitBackgroundClip: 'text',
   backgroundClip: 'text',
   fontSize: '12vh',
   color: 'transparent',
