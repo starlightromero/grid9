@@ -5,9 +5,9 @@ const style = {
   fontSize: '5vh',
 }
 
-const GridItem = ({ value, onClick }) => (
+const GridItem = ({ sign, onClick }) => (
   <button style={style} onClick={onClick}>
-    {value}
+    <img src={sign} />
   </button>
 )
 

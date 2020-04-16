@@ -19,13 +19,16 @@ const Game = () => {
   const [grid, setGrid] = useState(Array(9).fill(null))
   const [isXTurn, setIsXTurn] = useState(true)
   const winner = calculateWinner(grid)
+
   const handleClick = i => {
     const checkGrid = [...grid]
     if (winner || checkGrid[i]) return;
-    checkGrid[i] = isXTurn ? '∆' :'ø'
+    checkGrid[i] = isXTurn ? x : o
     setGrid(checkGrid)
     setIsXTurn(!isXTurn)
   }
+
+  const sign = () => isXTurn ? x : o
 
   const newGame = () => (
     <button style={buttonStyle} onClick={() => setGrid(Array(9).fill(null))}>
@@ -36,9 +39,9 @@ const Game = () => {
   return (
     <>
       <Header />
-      <Grid items={grid} onClick={handleClick} />
+      <Grid signs={grid} onClick={handleClick} />
       <div>
-        <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (isXTurn ? '∆' : 'ø')}</p>
+        <p>{winner ? 'Winner: ' + (winner === x ? 'x' : 'o') : 'Next Player: ' + (isXTurn ? 'x' : 'o')}</p>
         {newGame()}
       </div>
     </>

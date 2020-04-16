@@ -10,11 +10,11 @@ const style = {
     gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)'
 };
 
-const Grid = ({ items, onClick }) => (
+const Grid = ({ signs, onClick }) => (
   <>
     <div style={style}>
-      {items.map((item, i) => (
-        <GridItem key={i} value={item} onClick={() => onClick(i)} />
+      {signs.map((sign, i) => (
+        <GridItem key={i} sign={sign} onClick={() => onClick(i)} />
       ))}
     </div>
   </>
