@@ -10,10 +10,10 @@ const imgStyle = {
   height: '10vh',
 }
 
-const GridItem = ({ key, sign, onClick }) => {
+const GridItem = ({ sign, onClick }) => {
   return (
     <button style={style} onClick={onClick}>
-      <img key={key} style={imgStyle} src={sign} alt="alt"/>
+      <img style={imgStyle} src={sign} alt=""/>
     </button>
   )
 }

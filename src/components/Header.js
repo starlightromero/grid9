@@ -5,6 +5,8 @@ const headerStyle = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  borderBottom: '3px solid #00ffff',
+  width: '100%',
 }
 
 const h1Style = {
@@ -19,6 +21,7 @@ const h1Style = {
 const h3Style = {
   fontSize: '2vh',
   margin: 0,
+  marginBottom: '4vh',
 }
 
 const Header = () => (
