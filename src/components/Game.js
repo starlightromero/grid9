@@ -1,4 +1,4 @@
-import React, { useState , useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import Header from './Header'
 import Grid from './Grid'
 import { calculateWinner } from '../helper'
@@ -11,11 +11,10 @@ const Game = () => {
   const [isXTurn, setIsXTurn] = useState(true)
   const winner = calculateWinner(grid)
 
-  const gref = useRef(null)
+  const gridItemRef = useRef(null)
 
   const handleNewGame = () => {
     setGrid(Array(9).fill(null))
-    // gridItemRef.current.style.visibility = 'hidden'
     document.getElementById('0').style.visibility = 'hidden'
     document.getElementById('1').style.visibility = 'hidden'
     document.getElementById('2').style.visibility = 'hidden'
@@ -32,6 +31,7 @@ const Game = () => {
     const checkGrid = [...grid]
     if (winner || checkGrid[i]) return
     checkGrid[i] = isXTurn ? x : o
+    console.log(gridItemRef.current)
     document.getElementById(i).style.visibility = 'visible'
     setGrid(checkGrid)
     setIsXTurn(!isXTurn)
@@ -41,7 +41,7 @@ const Game = () => {
     <>
       <Header onClick ={handleNewGame} />
       <Main>
-        <Grid signs={grid} ref={gref} onClick={handleTurn} />
+        <Grid signs={grid} ref={gridItemRef} onClick={handleTurn} />
         <p>{winner ? 'Winner: ' + (winner === x ? 'x' : 'o') : 'Next Player: ' + (isXTurn ? 'x' : 'o')}</p>
       </Main>
     </>

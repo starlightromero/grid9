@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const GridItem = ({ sign, id, onClick }) => (
+const imgStyle = {
+  visibility: 'hidden',
+}
+
+const GridItem = ({ sign, id, onClick }, ref) => (
   <StyledGridItem onClick={onClick}>
-    <Img src={sign} id={id}/>
+    <Img src={sign} style={imgStyle} id={id} ref={ref}/>
   </StyledGridItem>
 )
+
+const forwardedGridItem = React.forwardRef(GridItem)
 
 const StyledGridItem = styled.button`
   border: none;
@@ -17,7 +23,6 @@ const StyledGridItem = styled.button`
 const Img = styled.img`
   height: 10vh;
   width: 10vh;
-  visibility: hidden;
 `
 
-export default GridItem
+export default forwardedGridItem
