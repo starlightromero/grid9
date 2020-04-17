@@ -16,14 +16,18 @@ const Header = ({ onClick }) => (
 )
 
 const Heading = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-bottom: 3px solid #00ffff;
-  width: 100%;
   background: white;
-  padding: 1vw;
+  padding: 1vh;
+  z-index: 1;
 `
 
 const Title = styled.div`

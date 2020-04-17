@@ -9,13 +9,14 @@ const GridItem = ({ sign, id, onClick }) => (
 
 const StyledGridItem = styled.button`
   border: none;
-  background: transparent;
-  background-position: none;
+  margin: 0.5vh;
+  background: #f6effc;
   cursor: pointer;
 `
 
 const Img = styled.img`
   height: 10vh;
+  width: 10vh;
   visibility: hidden;
 `
 

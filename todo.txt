@@ -1,4 +1,4 @@
 1. Refactor handleNewGame in Game.js to useRef and useEffect
-2. Fix Header not full width
-3. Settings changed light/dark mode
-4. Animations
+2. Settings changed light/dark mode
+3. Animations
+4. Mobile-friendly grid
