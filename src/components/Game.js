@@ -12,12 +12,23 @@ const Game = () => {
 
   const handleNewGame = () => {
     setGrid(Array(9).fill(null))
+    document.getElementById('0').style.visibility = 'hidden'
+    document.getElementById('1').style.visibility = 'hidden'
+    document.getElementById('2').style.visibility = 'hidden'
+    document.getElementById('3').style.visibility = 'hidden'
+    document.getElementById('4').style.visibility = 'hidden'
+    document.getElementById('5').style.visibility = 'hidden'
+    document.getElementById('6').style.visibility = 'hidden'
+    document.getElementById('7').style.visibility = 'hidden'
+    document.getElementById('8').style.visibility = 'hidden'
+    setIsXTurn(true)
   }
 
   const handleTurn = i => {
     const checkGrid = [...grid]
-    if (winner || checkGrid[i]) return;
+    if (winner || checkGrid[i]) return
     checkGrid[i] = isXTurn ? x : o
+    document.getElementById(i).style.visibility = 'visible'
     setGrid(checkGrid)
     setIsXTurn(!isXTurn)
   }

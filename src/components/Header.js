@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const Header = ({ onClick }) => (
   <Heading>
-    <Button src={settings} alt="settings" onClick={() => {}} />
+    <Button src={settings} alt="settings" onClick={() => {alert('settings clicked')}} />
     <Title>
       <H1>Grid9</H1>
       <H3>The grid is your battlefield</H3>

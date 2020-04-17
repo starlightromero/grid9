@@ -8,7 +8,7 @@ const Grid = ({ signs, onClick }) => (
     <Background src={background} alt="grid" />
     <StyledGrid>
       {signs.map((sign, i) => (
-        <GridItem key={i} sign={sign} onClick={() => onClick(i)} />
+        <GridItem key={i} sign={sign} id={i} onClick={() => onClick(i)} />
       ))}
     </StyledGrid>
   </>
