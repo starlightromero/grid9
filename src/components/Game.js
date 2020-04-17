@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Header from './Header'
-import NewGame from './NewGame'
 import Grid from './Grid'
 import { calculateWinner } from '../helper'
 import x from '../assets/x.png'
@@ -25,8 +24,7 @@ const Game = () => {
 
   return (
     <>
-      <Header />
-      <NewGame onClick={handleNewGame} />
+      <Header onClick ={handleNewGame} />
       <Grid signs={grid} onClick={handleTurn} />
       <div>
         <p>{winner ? 'Winner: ' + (winner === x ? 'x' : 'o') : 'Next Player: ' + (isXTurn ? 'x' : 'o')}</p>

@@ -1,22 +1,20 @@
 import React from 'react'
+import add from '../assets/add.png'
+
+const NewGame = ({ onClick }) => (
+  <button style={buttonStyle} onClick={onClick}>
+    <img src={add} style={imgStyle} alt="add" />
+  </button>
+)
 
 const buttonStyle = {
   background: 'none',
-  border: '0.3vh solid black',
-  borderRadius: '5vh',
-  padding: '2.5vh',
-  textTransform: 'uppercase',
-  fontFamily: 'Lexend Giga, sans-serif',
-  fontSize: '2vh',
-  margin: '3vh',
+  border: 'none',
+  cursor: 'pointer',
 }
 
-const NewGame = ({ onClick }) => {
-  return (
-    <button style={buttonStyle} onClick={onClick}>
-      New Game
-    </button>
-  )
+const imgStyle = {
+  height: '8vw',
 }
 
 export default NewGame
