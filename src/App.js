@@ -1,5 +1,6 @@
 import React from 'react'
 import Game from './components/Game'
+import styled from 'styled-components'
 
 const style = {
   fontFamily: 'Lexend Giga, sans-serif',
