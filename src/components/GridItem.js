@@ -1,19 +1,20 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const GridItem = ({ sign, onClick }) => (
-  <button style={style} onClick={onClick}>
-    <img style={imgStyle} src={sign} alt=""/>
-  </button>
+  <StyledGridItem onClick={onClick}>
+    <Img src={sign} alt=""/>
+  </StyledGridItem>
 )
 
-const style = {
-  border: 'none',
-  background: 'transparent',
-  backgroundPosition: 'none',
-}
+const StyledGridItem = styled.button`
+  border: none;
+  background: transparent;
+  background-position: none;
+`
 
-const imgStyle = {
-  height: '10vh',
-}
+const Img = styled.img`
+  height: 10vh;
+`
 
 export default GridItem

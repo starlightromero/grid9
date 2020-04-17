@@ -2,25 +2,23 @@ import React from 'react'
 import Game from './components/Game'
 import styled from 'styled-components'
 
-const style = {
-  fontFamily: 'Lexend Giga, sans-serif',
-  textAlign: 'center',
-  textTransform: 'uppercase',
-  fontSize: '5vh',
-  border: 'none',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  overflow: 'hidden',
-}
+const StyledApp = styled.div`
+  font-family: 'Lexend Giga', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5vh;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`
 
-const App = () => {
-  return (
-    <div className="App" style={style}>
-      <Game />
-    </div>
-  );
-}
+const App = () => (
+  <StyledApp>
+    <Game />
+  </StyledApp>
+)
 
-export default App;
+export default App

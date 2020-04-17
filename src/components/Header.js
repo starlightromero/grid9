@@ -1,48 +1,50 @@
 import React from 'react'
-import Settings from './Settings'
-import NewGame from './NewGame'
+import Button from './Button'
+import settings from '../assets/settings.png'
+import add from '../assets/add.png'
+import styled from 'styled-components'
 
 const Header = ({ onClick }) => (
-  <header style={headerStyle}>
-    <Settings />
-    <div style={titleStyle}>
-      <h1 style={h1Style}>Grid9</h1>
-      <h3 style={h3Style}>The grid is your battlefield</h3>
-    </div>
-    <NewGame onClick={onClick} />
-  </header>
+  <Heading>
+    <Button src={settings} alt="settings" onClick={() => {}} />
+    <Title>
+      <H1>Grid9</H1>
+      <H3>The grid is your battlefield</H3>
+    </Title>
+    <Button src={add} alt="add" onClick={onClick} />
+  </Heading>
 )
 
-const headerStyle = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-  alignItems: 'center',
-  borderBottom: '3px solid #00ffff',
-  width: '100%',
-  background: 'white',
-  padding: '1vw',
-}
+const Heading = styled.header`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid #00ffff;
+  width: 100%;
+  background: white;
+  padding: 1vw;
+`
 
-const titleStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-}
+const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
-const h1Style = {
-  backgroundImage: 'linear-gradient(to right, #00ffff, #8a2be2, #00ffff)',
-  WebkitBackgroundClip: 'text',
-  backgroundClip: 'text',
-  fontSize: '7vw',
-  color: 'transparent',
-  margin: 0,
-}
+const H1 = styled.h1`
+  background-image: linear-gradient(to right, #00ffff, #8a2be2, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 7vw;
+  color: transparent;
+  margin: 0;
+`
 
-const h3Style = {
-  fontSize: '1vw',
-  margin: 0,
-}
+const H3 = styled.h3`
+  font-size: 1vw;
+  margin: 0;
+`
 
 export default Header
