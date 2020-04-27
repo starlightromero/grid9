@@ -15,15 +15,9 @@ const Game = () => {
 
   const handleNewGame = () => {
     setGrid(Array(9).fill(null))
-    document.getElementById('0').style.visibility = 'hidden'
-    document.getElementById('1').style.visibility = 'hidden'
-    document.getElementById('2').style.visibility = 'hidden'
-    document.getElementById('3').style.visibility = 'hidden'
-    document.getElementById('4').style.visibility = 'hidden'
-    document.getElementById('5').style.visibility = 'hidden'
-    document.getElementById('6').style.visibility = 'hidden'
-    document.getElementById('7').style.visibility = 'hidden'
-    document.getElementById('8').style.visibility = 'hidden'
+    for (let i=0; i<9; i++) {
+      document.getElementById(i.toString()).style.visibility = 'hidden'
+    }
     setIsXTurn(true)
   }
 
